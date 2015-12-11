@@ -1,6 +1,10 @@
 #!/bin/bash
 
 set -x
+set -e -o pipefail
+
+echo 'Installing the submodules...'
+git submodule init && git submodule
 
 echo 'Setting up symlinks...'
 
