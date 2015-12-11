@@ -15,7 +15,9 @@ Clone and run the installation script. Make sure there aren't currently any file
 
 ```bash
 git clone git@github.com:andreweduffy/all_configs.git
-cd all_configs && ./install.sh
+cd all_configs && git submodule init && git submodule update && ./install.sh
 ```
 
-It sets up the symlinks and installs all of the vim plugins
+It sets up the symlinks and installs all of the vim plugins, just quit it when all plugins are done
+installing. You'll have my vim/tmux config all setup!
+
