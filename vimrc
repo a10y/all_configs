@@ -10,14 +10,16 @@ let g:vundle_default_git_proto = 'git'
 
 call vundle#begin()
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'majutsushi/tagbar'
+Plugin 'L9'
 Plugin 'bling/vim-airline'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'lrvick/Conque-Shell'
+Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'L9'
 " Language support
 Plugin 'derekwyatt/vim-scala' " Scala
+Plugin 'fatih/vim-go'         " Golang
 Plugin 'leafgarland/typescript-vim' " TypeScript
 " Color Schemes
 Plugin 'nanotech/jellybeans.vim'
@@ -193,7 +195,7 @@ let g:airline_powerline_fonts = 1
 "
 " Set trailing character code
 set list
-set lcs=trail:•
+set lcs=trail:•,tab:\ \ 
 
 " Set the background color correctly when redraw occurs
 set t_ut=
@@ -204,3 +206,4 @@ set t_ut=
 
 " Set the indentation for access modifiers in classes (e.g. public:, private:)
 set cino=g0
+
