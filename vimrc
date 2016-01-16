@@ -207,3 +207,9 @@ set t_ut=
 " Set the indentation for access modifiers in classes (e.g. public:, private:)
 set cino=g0
 
+function StartTerm()
+    execute 'ConqueTermSplit' . $SHELL
+    setlocal nolist
+endfunction
+
+nnoremap ss :call StartTerm()<cr>
