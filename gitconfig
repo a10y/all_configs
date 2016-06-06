@@ -1,12 +1,12 @@
 # This is Git's per-user configuration file.
 [core]
 # Please adapt and uncomment the following lines:
-	user = Andrew Duffy
-	email = agd@stanford.edu
-	editor = /usr/bin/env vim
+  user = Andrew Duffy
+  email = agd@stanford.edu
+  editor = /usr/bin/env nvim
 [user]
-	name = Andrew Duffy
-	email = root@aduffy.org
+  name = Andrew Duffy
+  email = root@aduffy.org
 
 [alias]
   co = "checkout"
@@ -16,3 +16,5 @@
   b = "branch"
   d = "diff"
   xlog = "log --graph --full-history --all --color --pretty=format:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s\""
+  slog = "log --pretty=format:\"%h %G? %aN  %s\""
+  sc = "commit -S"
