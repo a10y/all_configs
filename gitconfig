@@ -6,7 +6,7 @@
   editor = /usr/bin/env nvim
 [user]
   name = Andrew Duffy
-  email = root@aduffy.org
+  email = root@aduffy.io
 
 [alias]
   co = "checkout"
