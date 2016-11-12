@@ -32931,7 +32931,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>388 222 481 170 0 0 1920 1178 </string>
+	<string>388 164 481 94 0 0 1920 1178 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>500 422 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -32941,11 +32941,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 259 796 473 0 0 1920 1178 </string>
+	<string>269 329 918 495 0 0 1920 1178 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 2 1914 1174 0 0 1920 1178 </string>
+	<string>5 5 1914 580 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>3 22 1914 1156 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -32969,7 +32969,7 @@
 	<key>NSWindow Frame iTerm Window 19</key>
 	<string>554 77 570 377 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>6 2 954 1174 0 0 1920 1178 </string>
+	<string>174 243 650 454 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>225 573 650 477 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -35550,7 +35550,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InconsolataForPowerline 16</string>
+			<string>InconsolataForPowerlineNerdFontComplete---Medium 16</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -35702,7 +35702,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-10-22T04:28:41Z</date>
+	<date>2016-10-26T06:56:05Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
