@@ -19,13 +19,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 function prompt() {
   local user=$(whoami)
-  local color=yellow
   #local prompts=(∇ ∆ ∫ ⇰)
   local prompts=(∆)
-  if [[ "$user" = "root" ]]; then
-    color=red
-  fi
-  echo "%B%F{$color}%n%f @ %U%F{cyan}%~%u%f\n$prompts[RANDOM%$#prompts+1] "
+  echo "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f $prompts[RANDOM%$#prompts+1] "
 }
 
 function rprompt() {
