@@ -90,6 +90,7 @@ export OPENSSL_INCLUDE_DIR="/usr/local/opt/openssl/include"
 export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 
 
-# Set black tabbar
+# Set black tabbar in iTerm2
+# https://iterm2.com/documentation-escape-codes.html
 printf -- $'\033]6;1;bg;red;brightness;20\a\033]6;1;bg;green;brightness;20\a\033]6;1;bg;blue;brightness;20\a'
 
