@@ -1,6 +1,4 @@
-# Override LSCOLORS
-#export LSCOLORS="GxfxGxExCxCxBgxBxB"
-
+## Basics
 setopt auto_cd
 setopt promptsubst
 
@@ -10,8 +8,6 @@ compinit
 
 # Use Emacs keybindings for line editing
 bindkey -e
-
-# Allow functions and substitutions in prompt string
 
 # Source git-prompt script to allow showing git info
 source $HOME/.bin/git-prompt.sh
@@ -36,21 +32,34 @@ export RPROMPT='$(rprompt)'
 # export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+## ALIASES
+# Aliases for nagivation
+alias ls="ls -G" # Color
+alias ll="ls -Gahl"
+alias l="ls -Ga"
+alias grep="grep --color"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# Aliases for Git
+alias g="git"
+alias ga="git add"
+alias gc="git commit"
+alias gs="git status"
+alias gd="git diff"
+alias gh="git help"
+alias gl="git log"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/.aliases
+# Gradle
+alias gw="./gradlew"
+
+# Neovim all the way!
+alias vim="nvim"
+
+# Docker
+alias d="docker"
+alias dc="docker-compose"
+
+# Aliases for applications
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
 
 
 export GOPATH=$HOME/gopkgs
@@ -81,9 +90,6 @@ export PATH=$HOME/virtualenvs/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 
 
-# Neovim all the way!
-alias vim="nvim"
-
 # Setup CDPATH
 export CDPATH=.:$HOME/git:$HOME/stanford
 
@@ -91,8 +97,16 @@ export CDPATH=.:$HOME/git:$HOME/stanford
 export RUST_SRC_PATH="$HOME/git/rust/src"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Miniconda
+export PATH=/Users/andrew/miniconda2/bin:$PATH
+
 # Make sure homebrew overrides come first
 export PATH=/usr/local/bin:$PATH
 
 # ... except for whatever I have
 export PATH=$HOME/.bin:$PATH
+
+# Fix locations for OpenSSL installed via brew
+export OPENSSL_INCLUDE_DIR="$(brew --prefix openssl)/include"
+export OPENSSL_LIB_DIR="$(brew --prefix openssl)/lib"
+

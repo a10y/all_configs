@@ -33272,21 +33272,21 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>764 82 650 158 0 0 1680 1028 </string>
+	<string>764 33 700 341 0 0 1680 1050 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>733 572 606 456 0 0 1680 1028 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>610 648 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>612 417 700 622 0 0 1920 1178 </string>
+	<string>492 304 700 622 0 0 1680 1028 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>330 246 918 495 0 0 1680 1028 </string>
+	<string>330 158 918 495 0 0 1680 1028 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>6 516 730 504 0 0 1680 1028 </string>
+	<string>5 8 1674 1012 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>6 8 834 1012 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -36599,7 +36599,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>InconsolataForPowerlineNerdFontComplete---Medium 18</string>
+			<string>SauceCodeProNerdFontComplete---Regular 16</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -36755,7 +36755,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-14T23:50:13Z</date>
+	<date>2016-11-17T08:29:07Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
