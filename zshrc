@@ -10,7 +10,7 @@ compinit
 bindkey -e
 
 # Source git-prompt script to allow showing git info
-source $HOME/.bin/git-prompt.sh
+source $HOME/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 function prompt() {
@@ -85,6 +85,8 @@ export RUST_SRC_PATH="$HOME/git/rust/src"
 
 export PATH=$HOME/.bin:/usr/local/bin:$HOME/miniconda2/bin:$HOME/.cargo/bin:$HOME/.local/bin:/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:${GOPATH//://bin:}/bin:$PATH
 
+export PYTHONSTARTUP=$HOME/.pythonrc
+
 # Fix locations for OpenSSL installed via brew
 export OPENSSL_INCLUDE_DIR="/usr/local/opt/openssl/include"
 export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
@@ -94,3 +96,6 @@ export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 # https://iterm2.com/documentation-escape-codes.html
 printf -- $'\033]6;1;bg;red;brightness;20\a\033]6;1;bg;green;brightness;20\a\033]6;1;bg;blue;brightness;20\a'
 
+
+
+. /Users/andrew/torch/install/bin/torch-activate
