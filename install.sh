@@ -5,6 +5,8 @@ set -e -o pipefail
 
 CONFIGS_DIR="$(pwd)"
 
+ln -s ${PWD}/git-prompt.sh ${HOME}/.git-prompt.sh
+
 echo 'Installing the submodules...'
 git submodule init && git submodule
 

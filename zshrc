@@ -10,7 +10,7 @@ compinit
 bindkey -e
 
 # Source git-prompt script to allow showing git info
-source $HOME/git-prompt.sh
+source $HOME/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 function prompt() {
@@ -97,5 +97,8 @@ export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 printf -- $'\033]6;1;bg;red;brightness;20\a\033]6;1;bg;green;brightness;20\a\033]6;1;bg;blue;brightness;20\a'
 
 
+# Activate Torch if installed available.
+if [[ -d "${HOME}/torch" ]]; then
+  . /Users/andrew/torch/install/bin/torch-activate
+fi
 
-. /Users/andrew/torch/install/bin/torch-activate
