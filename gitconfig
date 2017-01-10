@@ -3,7 +3,7 @@
 # Please adapt and uncomment the following lines:
   user = Andrew Duffy
   email = agd@stanford.edu
-  editor = /usr/bin/env nvim
+  editor = /usr/bin/vim
 [user]
 	name = Andrew Duffy
 	email = root@aduffy.io

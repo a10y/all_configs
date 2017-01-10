@@ -2,6 +2,9 @@
 setopt auto_cd
 setopt promptsubst
 
+## Setup the fpath to read functions, e.g. for completion
+fpath+="${HOME}/.zfunc"
+
 # Tab completion
 autoload -Uz compinit
 compinit
