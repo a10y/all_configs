@@ -108,9 +108,11 @@ export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 # fi
 
 # Java setup
+if [[ $(uname -a) =~ "Darwin" ]]; then
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 function jhome() {
     export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
     echo "Set JAVA_HOME=$JAVA_HOME"
 }
+fi
