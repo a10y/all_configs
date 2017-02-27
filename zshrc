@@ -19,9 +19,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 function prompt() {
   local user=$(whoami)
   #local prompts=(∇ ∆ ∫ ⇰)
-  local prompts=(❯)
+  local prompts=()
   #echo -n "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f\n$prompts[RANDOM%$#prompts+1]%f "
-  echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B$prompts[RANDOM%$#prompts+1]%b "
+  echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B❯%b "
 }
 
 function rprompt() {
@@ -95,12 +95,6 @@ export PYTHONSTARTUP=$HOME/.pythonrc
 # Fix locations for OpenSSL installed via brew
 export OPENSSL_INCLUDE_DIR="/usr/local/opt/openssl/include"
 export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
-
-
-# Set black tabbar in iTerm2
-# https://iterm2.com/documentation-escape-codes.html
-# printf -- $'\033]6;1;bg;red;brightness;20\a\033]6;1;bg;green;brightness;20\a\033]6;1;bg;blue;brightness;20\a'
-
 
 # Activate Torch if installed available.
 # if [[ -d "${HOME}/torch" ]]; then
