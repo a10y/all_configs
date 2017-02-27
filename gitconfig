@@ -2,11 +2,11 @@
 [core]
 # Please adapt and uncomment the following lines:
   user = Andrew Duffy
-  email = agd@stanford.edu
-  editor = /usr/bin/vim
+  email = andreweduffy@gmail.com
+  editor = /usr/bin/env nvim
 [user]
 	name = Andrew Duffy
-	email = root@aduffy.io
+	email = andreweduffy@gmail.com
 
 [alias]
   co = "checkout"
@@ -18,3 +18,8 @@
   xlog = "log --graph --full-history --all --color --pretty=format:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s\""
   slog = "log --pretty=format:\"%h %G? %aN  %s\""
   sc = "commit -S"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

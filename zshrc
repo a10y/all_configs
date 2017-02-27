@@ -19,12 +19,14 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 function prompt() {
   local user=$(whoami)
   #local prompts=(∇ ∆ ∫ ⇰)
-  local prompts=(∆)
-  echo -n "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f $prompts[RANDOM%$#prompts+1] "
+  local prompts=(❯)
+  #echo -n "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f\n$prompts[RANDOM%$#prompts+1]%f "
+  echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B$prompts[RANDOM%$#prompts+1]%b "
 }
 
 function rprompt() {
-  echo -n "%(?.%B%F{green}✓✓%f%b.%?)$(__git_ps1)"
+  #echo -n "%(?.%B%F{green}✓%f%b.%?)$(__git_ps1)"
+  echo -n "%(?..%?)$(__git_ps1)"
 }
 # Prompt settings
 # Single-quoting delays substitution to happen dynamically on each "ENTER"
@@ -54,15 +56,15 @@ alias gl="git log"
 # Gradle
 alias gw="./gradlew"
 
-# Neovim all the way!
-alias vim="nvim"
-
 # Docker
 alias d="docker"
 alias dc="docker-compose"
 
 # Aliases for applications
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
+
+# Stack: TODO Fix once the ghc issue is fixed
+alias stack="stack --system-ghc"
 
 export GOPATH=$HOME/gopkgs
 export LANG="en_US.UTF-8"
@@ -75,7 +77,7 @@ export LC_TIME="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # Setup CDPATH
-export CDPATH=.:$HOME/git:$HOME/stanford
+export CDPATH=.:$HOME/git:$HOME/Dropbox/Stanford
 
 # Rust source for racer
 export RUST_SRC_PATH="$HOME/git/rust/src"
@@ -97,11 +99,18 @@ export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 
 # Set black tabbar in iTerm2
 # https://iterm2.com/documentation-escape-codes.html
-printf -- $'\033]6;1;bg;red;brightness;20\a\033]6;1;bg;green;brightness;20\a\033]6;1;bg;blue;brightness;20\a'
+# printf -- $'\033]6;1;bg;red;brightness;20\a\033]6;1;bg;green;brightness;20\a\033]6;1;bg;blue;brightness;20\a'
 
 
 # Activate Torch if installed available.
-if [[ -d "${HOME}/torch" ]]; then
-  . /Users/andrew/torch/install/bin/torch-activate
-fi
+# if [[ -d "${HOME}/torch" ]]; then
+#   . /Users/andrew/torch/install/bin/torch-activate
+# fi
 
+# Java setup
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+function jhome() {
+    export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
+    echo "Set JAVA_HOME=$JAVA_HOME"
+}
