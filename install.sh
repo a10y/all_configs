@@ -7,6 +7,8 @@ CONFIGS_DIR="$(pwd)"
 
 ln -s ${PWD}/git-prompt.sh ${HOME}/.git-prompt.sh
 
+ln -s ${PWD}/zshrc ${HOME}/.zshrc
+
 echo 'Installing the submodules...'
 git submodule init && git submodule
 
