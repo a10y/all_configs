@@ -39,10 +39,18 @@ export EDITOR='nvim'
 
 ## ALIASES
 # Aliases for nagivation
-alias ls="ls -G" # Color
-alias ll="ls -Gahl"
-alias l="ls -Ga"
-alias grep="grep --color"
+if [[ $(uname -a) =~ "Darwin" ]]; then
+    alias ls="ls -G" # Color
+    alias ll="ls -Gahl"
+    alias l="ls -Ga"
+    alias grep="grep --color"
+elif [[ $(uname -a) =~ "Linux" ]]; then
+    alias ls="ls --color" # Color
+    alias ll="ls --color -ahl"
+    alias l="ls --color -a"
+    alias grep="grep --color"
+fi
+
 
 # Aliases for Git
 alias g="git"
@@ -103,10 +111,10 @@ export OPENSSL_LIB_DIR="/usr/local/opt/openssl/lib"
 
 # Java setup
 if [[ $(uname -a) =~ "Darwin" ]]; then
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+    export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-function jhome() {
-    export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
-    echo "Set JAVA_HOME=$JAVA_HOME"
-}
+    function jhome() {
+        export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
+        echo "Set JAVA_HOME=$JAVA_HOME"
+    }
 fi
