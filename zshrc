@@ -21,12 +21,18 @@ function prompt() {
   #local prompts=(∇ ∆ ∫ ⇰)
   local prompts=()
   #echo -n "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f\n$prompts[RANDOM%$#prompts+1]%f "
-  echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B❯%b "
+  #echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B❯%b "
+  #echo -n "%B%F{%(#.red.yellow)}%n%f%b %Uin%u %B%F{cyan}%~%b%f %B❯%b "
+  echo -n "%B%F{%(#.red.yellow)}%n%f%b ∈ %B%F{cyan}%~%b%f %B❯%b "
+
+# Alternative prompt.
+# Uncomment above when you want to go back
+#   echo -n "%B%F{yellow}%b%F{black}%K{white}%~%f%k%B%F{yellow}%b%f "
 }
 
 function rprompt() {
   #echo -n "%(?.%B%F{green}✓%f%b.%?)$(__git_ps1)"
-  echo -n "%(?..%?)$(__git_ps1)"
+  echo -n "%K{red}%(?..%?)%k%B%F{green}$(__git_ps1)%b%f"
 }
 # Prompt settings
 # Single-quoting delays substitution to happen dynamically on each "ENTER"
@@ -72,7 +78,7 @@ alias dc="docker-compose"
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
 
 # Stack: TODO Fix once the ghc issue is fixed
-alias stack="stack --system-ghc"
+#alias stack="stack --system-ghc"
 
 export GOPATH=$HOME/gopkgs
 export LANG="en_US.UTF-8"
@@ -115,6 +121,7 @@ if [[ $(uname -a) =~ "Darwin" ]]; then
 
     function jhome() {
         export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
-        echo "Set JAVA_HOME=$JAVA_HOME"
+        echo "$JAVA_HOME"
     }
 fi
+
