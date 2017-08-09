@@ -23,7 +23,7 @@ function prompt() {
   #echo -n "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f\n$prompts[RANDOM%$#prompts+1]%f "
   #echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B❯%b "
   #echo -n "%B%F{%(#.red.yellow)}%n%f%b %Uin%u %B%F{cyan}%~%b%f %B❯%b "
-  echo -n "%B%F{%(#.red.yellow)}%n%f%b ∈ %B%F{cyan}%~%b%f %B❯%b "
+  echo -n "%B%F{%(#.red.yellow)}%K{blue}%n%b%f%k ∈ %B%F{cyan}%~%b%f %B❯%b "
 
 # Alternative prompt.
 # Uncomment above when you want to go back
@@ -36,8 +36,8 @@ function rprompt() {
 }
 # Prompt settings
 # Single-quoting delays substitution to happen dynamically on each "ENTER"
-export PROMPT='$(prompt)'
-export RPROMPT='$(rprompt)'
+#export PROMPT='$(prompt)'
+#export RPROMPT='$(rprompt)'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -125,3 +125,6 @@ if [[ $(uname -a) =~ "Darwin" ]]; then
     }
 fi
 
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+source  ~/powerlevel9k/powerlevel9k.zsh-theme
