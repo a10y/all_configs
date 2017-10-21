@@ -23,7 +23,7 @@ function prompt() {
   #echo -n "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f\n$prompts[RANDOM%$#prompts+1]%f "
   #echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B❯%b "
   #echo -n "%B%F{%(#.red.yellow)}%n%f%b %Uin%u %B%F{cyan}%~%b%f %B❯%b "
-  echo -n "%B%F{%(#.red.yellow)}%K{blue}%n%b%f%k ∈ %B%F{cyan}%~%b%f %B❯%b "
+  echo -n "%B%F{%(#.red.white)}%n%b%f ∈ %B%F{cyan}%~%b%f %B❯%b "
 
 # Alternative prompt.
 # Uncomment above when you want to go back
@@ -36,8 +36,8 @@ function rprompt() {
 }
 # Prompt settings
 # Single-quoting delays substitution to happen dynamically on each "ENTER"
-#export PROMPT='$(prompt)'
-#export RPROMPT='$(rprompt)'
+export PROMPT='$(prompt)'
+export RPROMPT='$(rprompt)'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -80,7 +80,9 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
 # Stack: TODO Fix once the ghc issue is fixed
 #alias stack="stack --system-ghc"
 
-export GOPATH=$HOME/gopkgs
+alias code='code-insiders'
+
+export GOPATH=$HOME/go
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -127,4 +129,7 @@ fi
 
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-source  ~/powerlevel9k/powerlevel9k.zsh-theme
+#source  ~/powerlevel9k/powerlevel9k.zsh-theme
+alias dev='docker-compose -f docker-compose.shared.yml'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
