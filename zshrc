@@ -18,12 +18,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 function prompt() {
   local user=$(whoami)
-  #local prompts=(∇ ∆ ∫ ⇰)
-  local prompts=()
-  #echo -n "%B%F{%(#.red.yellow)}%n%f:%U%F{cyan}%~%u%f\n$prompts[RANDOM%$#prompts+1]%f "
-  #echo -n "%B%F{%(#.red.yellow)}%n%f%b:%U%F{cyan}%~%u%f %B❯%b "
-  #echo -n "%B%F{%(#.red.yellow)}%n%f%b %Uin%u %B%F{cyan}%~%b%f %B❯%b "
-  echo -n "%B%F{%(#.red.white)}%n%b%f ∈ %B%F{cyan}%~%b%f %B❯%b "
+  echo -n "%* | %B%F{green}%~%b%f %B❯%b "
 
 # Alternative prompt.
 # Uncomment above when you want to go back
