@@ -18,11 +18,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 
 function prompt() {
   local user=$(whoami)
-  echo -n "%* | %B%F{green}%~%b%f %B❯%b "
-
-# Alternative prompt.
-# Uncomment above when you want to go back
-#   echo -n "%B%F{yellow}%b%F{black}%K{white}%~%f%k%B%F{yellow}%b%f "
+  # echo -n "%* | %B%F{green}%~%b%f %B❯%b "
+  echo -n "%B%F{red}❯%f%F{blue}❯%f%F{yellow}❯%f%b "
 }
 
 function rprompt() {
@@ -54,6 +51,7 @@ fi
 
 
 # Aliases for Git
+alias git="hub"
 alias g="git"
 alias ga="git add"
 alias gc="git commit"
@@ -71,6 +69,10 @@ alias dc="docker-compose"
 
 # Aliases for applications
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
+
+# Alias for fzf
+alias fzf='fzf --preview "head -50 {}"'
+alias ff='nvim $(fzf)'
 
 # Stack: TODO Fix once the ghc issue is fixed
 #alias stack="stack --system-ghc"
@@ -128,3 +130,9 @@ export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 alias dev='docker-compose -f docker-compose.shared.yml'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Setup environment for hub
+export GITHUB_HOST="github.palantir.build"
+if [[ -f "$HOME/.hubtoken" ]]; then
+    export GITHUB_TOKEN=$(cat $HOME/.hubtoken)
+fi
