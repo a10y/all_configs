@@ -19,7 +19,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 function prompt() {
   local user=$(whoami)
   # echo -n "%* | %B%F{green}%~%b%f %B❯%b "
-  echo -n "%B%F{red}❯%f%F{blue}❯%f%F{yellow}❯%f%b "
+  #echo -n "%F{magenta}%2~%f %B%F{red}❯%f%F{blue}❯%f%F{yellow}❯%f%b "
+  echo -n "%B%U%3~%b%u %B%F{red}❯%f%F{blue}❯%f%F{yellow}❯%f%b "
 }
 
 function rprompt() {
@@ -71,13 +72,14 @@ alias dc="docker-compose"
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
 
 # Alias for fzf
-alias fzf='fzf --preview "head -50 {}"'
+alias fzf='fzf --preview "head -n $(($(tput lines)-0)) {}"'
 alias ff='nvim $(fzf)'
 
 # Stack: TODO Fix once the ghc issue is fixed
 #alias stack="stack --system-ghc"
 
 alias code='code-insiders'
+alias gtd="nvim $HOME/GTD.txt"
 
 export GOPATH=$HOME/go
 export LANG="en_US.UTF-8"
@@ -129,7 +131,7 @@ export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 #source  ~/powerlevel9k/powerlevel9k.zsh-theme
 alias dev='docker-compose -f docker-compose.shared.yml'
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Setup environment for hub
 export GITHUB_HOST="github.palantir.build"
